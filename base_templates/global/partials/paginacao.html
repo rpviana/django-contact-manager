@@ -1,0 +1,18 @@
+{% if page_obj %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1&caixa_pesquisa={{ request.GET.caixa_pesquisa }}">&laquo; Inicio</a>
+                <a href="?page={{ page_obj.previous_page_number }}&caixa_pesquisa={{ request.GET.caixa_pesquisa }}">Anterior</a>
+            {% endif %}
+            <span class="current">
+                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+            </span>
+       
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}&caixa_pesquisa={{ request.GET.caixa_pesquisa }}">Seguinte</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}&caixa_pesquisa={{ request.GET.caixa_pesquisa }}">Última página &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endif %}

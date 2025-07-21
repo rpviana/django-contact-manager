@@ -1,15 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}Título{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'global/css/style.css' %}">
 </head>
 <body>
+    {% include "global/partials/header.html" %}
     <main>
         {% block content %}
             Estou no ficheiro base.html
         {% endblock content  %}
     </main>
+    {% include "global/partials/paginacao.html" %}
 </body>
 </html>
