@@ -1,0 +1,71 @@
+# 📒 ContactsFolder
+
+Hey there! 👋  
+I'm excited to share **ContactsFolder**, a web app I built as part of the **DjangoLearning-2025** course. It's designed to help you manage your contacts easily and efficiently, using Django.
+
+---
+
+## ✨ Features
+
+- ➕ Add, edit, and delete contacts
+- 🔍 Search contacts by name or email
+- 🔐 User authentication
+
+---
+
+## 🛠️ Requirements
+
+- Python `3.10+`
+- Django `4.x`
+
+---
+
+## ⚡ Quick Setup
+
+1. Clone this repo:
+    ```bash
+    git clone <repo-url>
+    ```
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. Run migrations:
+    ```bash
+    python manage.py migrate
+    ```
+4. Start the dev server:
+    ```bash
+    python manage.py runserver
+    ```
+
+---
+
+## 💡 How does it work?
+
+I followed Django's **MVC** pattern:
+
+- **Models**: Define the contact structure (name, email, phone, etc).
+- **Views**: Handle adding, editing, deleting, and searching contacts.
+- **Templates**: Render the HTML pages for users.
+
+Only registered users can manage their contacts thanks to authentication.  
+Searching uses database filters, so it's fast and efficient.
+
+---
+
+## 🚀 How to use
+
+Just go to [http://localhost:8000/](http://localhost:8000/) and start managing your contacts!  
+The interface is intuitive and responsive to make your life easier.
+
+---
+
+## 📚 License
+
+This project is for educational purposes.  
+Feel free to study, modify, and learn from it!
+
+---
+
+> Made with Django.
